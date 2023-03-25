@@ -1,0 +1,78 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/andrewhudson/Documents/source/repos/G6API/G6API.csproj": {}
+  },
+  "projects": {
+    "/Users/andrewhudson/Documents/source/repos/G6API/G6API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/andrewhudson/Documents/source/repos/G6API/G6API.csproj",
+        "projectName": "G6API",
+        "projectPath": "/Users/andrewhudson/Documents/source/repos/G6API/G6API.csproj",
+        "packagesPath": "/Users/andrewhudson/.nuget/packages/",
+        "outputPath": "/Users/andrewhudson/Documents/source/repos/G6API/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/andrewhudson/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "mysql.data": {
+              "target": "Package",
+              "version": "[8.0.32.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
