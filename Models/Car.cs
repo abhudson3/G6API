@@ -2,7 +2,7 @@ namespace G6API.Models
 {
     public class Car
     {
-        public int carId {get; set;}
+        public int id {get; set;}
         public string imageLink {get; set;}
         public string make {get; set;}
         public string model {get; set;}
