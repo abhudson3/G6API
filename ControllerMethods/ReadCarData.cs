@@ -18,7 +18,7 @@ namespace G6API.ControllerMethods
                 using (var rdr = cmd.ExecuteReader())
                 {
                     while(rdr.Read()){
-                        allCars.Add(new Car(){id = rdr.GetInt32(0), imageLink = rdr.GetString(1), make = rdr.GetString(2), model = rdr.GetString(3), vehicleType = rdr.GetString(4), motorKw = rdr.GetString(5), drivetrain = rdr.GetString(6), mpge = rdr.GetString(7), vehicleRange = rdr.GetString(8), chargeRateL2Dc = rdr.GetString(9), chargeRateMphL1L2Dc = rdr.GetString(10), batteryCapacity = rdr.GetString(11), seats = rdr.GetString(12), msrp = rdr.GetString(13) });
+                        allCars.Add(new Car(){id = rdr.GetInt32(0), imageLink = rdr.GetString(1), make = rdr.GetString(2), model = rdr.GetString(3), vehicleType = rdr.GetString(4), motorKw = rdr.GetString(5), drivetrain = rdr.GetString(6), mpge = rdr.GetString(7), vehicleRange = rdr.GetString(8), chargeRateL2Dc = rdr.GetString(9), chargeRateMphL1L2Dc = rdr.GetString(10), batteryCapacity = rdr.GetString(11), seats = rdr.GetString(12), msrp = rdr.GetString(13), deleted = rdr.GetBoolean(14) });
                     }
                 }
                 db.CloseConnection();

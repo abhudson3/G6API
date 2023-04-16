@@ -25,7 +25,11 @@ namespace G6API.Models
         public string seats {get; set;}
 
         public string msrp {get; set;}
-        
+
+        public bool deleted {get; set;}        
         
     }
 }
+
+
+

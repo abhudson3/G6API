@@ -12,8 +12,8 @@ namespace G6API.ControllerMethods
 
             if(isOpen){
                 MySqlConnection conn = db.GetConn();
-                string stm = @"INSERT INTO cars (imageLink, make, model, vehicleType, motorKw, drivetrain, mpge, vehicleRange, chargeRateL2Dc, chargeRateMphL1L2Dc, batteryCapacity, seats, msrp)
-                            VALUES (@imageLink, @make, @model, @vehicleType, @motorKw, @drivetrain, @mpge, @vehicleRange, @chargeRateL2Dc, @chargeRateMphL1L2Dc, @batteryCapacity, @seats, @msrp);";
+                string stm = @"INSERT INTO cars (imageLink, make, model, vehicleType, motorKw, drivetrain, mpge, vehicleRange, chargeRateL2Dc, chargeRateMphL1L2Dc, batteryCapacity, seats, msrp, deleted)
+                            VALUES (@imageLink, @make, @model, @vehicleType, @motorKw, @drivetrain, @mpge, @vehicleRange, @chargeRateL2Dc, @chargeRateMphL1L2Dc, @batteryCapacity, @seats, @msrp, @deleted);";
                 MySqlCommand cmd = new MySqlCommand(stm, conn);
                 //cmd.CommandText = stm;
                 cmd.Parameters.AddWithValue("@imageLink", value.imageLink);
@@ -29,6 +29,7 @@ namespace G6API.ControllerMethods
                 cmd.Parameters.AddWithValue("@batteryCapacity", value.batteryCapacity);
                 cmd.Parameters.AddWithValue("@seats", value.seats);
                 cmd.Parameters.AddWithValue("@msrp", value.msrp);
+                cmd.Parameters.AddWithValue("@deleted", value.deleted);
                 
                 cmd.Prepare();
                 cmd.ExecuteNonQuery();
@@ -46,7 +47,7 @@ namespace G6API.ControllerMethods
 
             if(isOpen){
                 MySqlConnection conn = db.GetConn();
-                string stm = @"UPDATE cars set imageLink = @imageLink, make = @make, model = @model, vehicleType = @vehicleType, motorKw = @motorKw, drivetrain = @drivetrain, mpge = @mpge, vehicleRange = @vehicleRange, chargeRateL2Dc = @chargeRateL2Dc, chargeRateMphL1L2Dc = @chargeRateMphL1L2Dc, batteryCapacity = @batteryCapacity, seats = @seats, msrp = @msrp WHERE id = @id";
+                string stm = @"UPDATE cars set imageLink = @imageLink, make = @make, model = @model, vehicleType = @vehicleType, motorKw = @motorKw, drivetrain = @drivetrain, mpge = @mpge, vehicleRange = @vehicleRange, chargeRateL2Dc = @chargeRateL2Dc, chargeRateMphL1L2Dc = @chargeRateMphL1L2Dc, batteryCapacity = @batteryCapacity, seats = @seats, msrp = @msrp, deleted = @deleted WHERE id = @id";
                 MySqlCommand cmd = new MySqlCommand(stm, conn);
                 
                 cmd.Parameters.AddWithValue("@id",id);
@@ -63,6 +64,7 @@ namespace G6API.ControllerMethods
                 cmd.Parameters.AddWithValue("@batteryCapacity", value.batteryCapacity);
                 cmd.Parameters.AddWithValue("@seats", value.seats);
                 cmd.Parameters.AddWithValue("@msrp", value.msrp);
+                cmd.Parameters.AddWithValue("@deleted", value.deleted);
                 
                 
                 cmd.ExecuteNonQuery();
